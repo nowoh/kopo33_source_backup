@@ -6,28 +6,28 @@ public class k33_ch6_5_5_ScoreAvg {
 	 */
 	
 	//ÃÑÁ¡
-	public int sum (int a, int b, int c) {
-		return a+b+c;
+	public int k33_sum (int k33_a, int k33_b, int k33_c) {
+		return k33_a+k33_b+k33_c;
 	}
 	
-	public int sum (int a, int b, int c, int d) {
-		return a+b+c+d;
+	public int k33_sum (int k33_a, int k33_b, int k33_c, int k33_d) {
+		return k33_a+k33_b+k33_c+k33_d;
 	}
 	
-	public int sum (int a, int b, int c, int d, int e) {
-		return a+b+c+d+e;
+	public int k33_sum (int k33_a, int k33_b, int k33_c, int k33_d, int k33_e) {
+		return k33_a+k33_b+k33_c+k33_d+k33_e;
 	}
 	
 	//Æò±Õ
-	public double avg (int a, int b, int c) {
-		return (a+b+c)/3;
+	public double k33_avg (int k33_a, int k33_b, int k33_c) {
+		return (k33_a+k33_b+k33_c)/3;
 	}
 	
-	public double avg (int a, int b, int c, int d) {
-		return (a+b+c+d)/4;
+	public double k33_avg (int k33_a, int k33_b, int k33_c, int k33_d) {
+		return (k33_a+k33_b+k33_c+k33_d)/4;
 	}
 	
-	public double avg (int a, int b, int c, int d, int e) {
-		return (a+b+c+d+e)/5;
+	public double k33_avg (int k33_a, int k33_b, int k33_c, int k33_d, int k33_e) {
+		return (k33_a+k33_b+k33_c+k33_d+k33_e)/5;
 	}
 }
