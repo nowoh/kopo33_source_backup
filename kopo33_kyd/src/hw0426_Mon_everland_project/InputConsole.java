@@ -34,7 +34,7 @@ public class InputConsole {
 	//주민등록번호 입력
 	public long inputCustomerIDNumber(ChValue cv) {
 		cv.customerIDNumber = 0;
-		 System.out.printf("%s\n", "주민등록번호를 입력하세요");
+		 System.out.printf("%s\n", "주민등록번호를 입력하세요. (- 제외 숫자만 입력)");
 		 
 		 while(true) {
 			 cv.IDNumber = scan.next();
