@@ -1,6 +1,6 @@
 package hw0427_Tue_ch7;
 
-public class k33_ch7_04_구분자_필드추출2 {		//별1
+public class k33_ch7_04_구분자_필드추출2 {
 
 	public static void main(String[] args) {
 		String[] k33_oneRec = {

@@ -1,6 +1,6 @@
 package hw0427_Tue_ch7;
 
-public class k33_ch7_10_Class_ArrayList200 {		//º°1
+public class k33_ch7_10_Class_ArrayList200 {		
 	
 	private int k33_student_id;
 	private String k33_name;

@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 
-public class k33_ch7_12_data200 {	//º°1
+public class k33_ch7_12_data200 {	
 
 	static ArrayList<k33_ch7_12_Class_ArrayList200> k33_ArrayOneRec = new ArrayList <k33_ch7_12_Class_ArrayList200>();
 	

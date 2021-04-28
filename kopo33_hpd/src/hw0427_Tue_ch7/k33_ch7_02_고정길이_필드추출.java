@@ -2,16 +2,16 @@ package hw0427_Tue_ch7;
 
 import java.text.DecimalFormat;
 
-public class k33_ch7_02_고정길이_필드추출 {		//별2
+public class k33_ch7_02_고정길이_필드추출 {		
 
-	public static void main(String[] args) {
-		DecimalFormat k33_dcf = new DecimalFormat("###,###,###");
+	public static void main(String[] args) {							//메인함수
+		DecimalFormat k33_dcf = new DecimalFormat("###,###,###");		//DecimalFormat 객체 생성
 		
-		String[] k33_oneRec = {
-				"01  초코파이             1,000  1    10,000",
+		String[] k33_oneRec = {											//문자열 배열 oneRec 정의
+				"01  초코파이             1,000  1    10,000",			//1,000 * 1 = 1,000인 값을 일부러 틀리게 수정
 				"02  바나나우유           1,500  4     6,000",
 				"03* 국내산삼겹살500g     4,000  1     4,000",
-				"04  오렌지주스           2,000  2    40,000",
+				"04  오렌지주스           2,000  2    40,000",			//2,000 * 2 = 4,000인 값을 일부러 틀리게 수정
 				"05  초코에몽             1,000  4     4,000",
 				"06* 수입바나나           2,000  1     2,000",
 				"07* 유기농이천쌀1kg      1,500  9    13,500",
@@ -39,23 +39,25 @@ public class k33_ch7_02_고정길이_필드추출 {		//별2
 				"29  하이네켄500ml        2,500  2     5,000",
 				"30* 후레쉬우유200ml        900  3     2,700"};
 		
-		for (int k33_i = 0; k33_i < k33_oneRec.length; k33_i++) {
+		for (int k33_i = 0; k33_i < k33_oneRec.length; k33_i++) {			//반복문 : 정수형 변수 i는 
 			k33_oneRec[k33_i] = k33_oneRec[k33_i].replaceAll(","," ");		//총 43바이트에서 43바이트로 맞춰야 콤마(,)가 없는 숫자도 변함없이
-															//정해진 바이트로 자르기 가능
-			byte[] k33_b = k33_oneRec[k33_i].getBytes();
+																			//정해진 바이트로 자르기 가능 따라서 " "으로 replace
+			byte[] k33_b = k33_oneRec[k33_i].getBytes();					//oneRec배열의 i번째 문자열 바이트 수 가져오기
 			
-			String k33_name = new String(k33_b, 4, 16);										//상품명
-			String k33_num = new String(k33_b,0, 3);										//상품 번호
-			int k33_price = Integer.parseInt(new String(k33_b, 23, 8).replace(" ", ""));	//상품 가격
-			int k33_cnt = Integer.parseInt(new String(k33_b, 31, 3).replace(" ", ""));		//수량
-			int k33_sum = Integer.parseInt(new String(k33_b, 34, 9).replace(" ", ""));		//합계
+			String k33_name = new String(k33_b, 4, 16);											//상품명
+			String k33_num = new String(k33_b,0, 3);											//상품 번호
+			int k33_price = Integer.parseInt(new String(k33_b, 23, 8).replace(" ", ""));		//상품 가격
+			int k33_cnt = Integer.parseInt(new String(k33_b, 31, 3).replace(" ", ""));			//수량
+			int k33_sum = Integer.parseInt(new String(k33_b, 34, 9).replace(" ", ""));			//합계
 			int k33_mod = k33_price * k33_cnt;													//수정 결과
 			
-			if (k33_price * k33_cnt != k33_sum) {
-				System.out.printf("**************************************************\n");
+			if (k33_price * k33_cnt != k33_sum) {												//조건문 : price * cnt가 sum과 다르면
+				System.out.printf("**************************************************\n");		//문자열 출력
 				System.out.printf("%s[%s%s%10s%5d%10s]\n", "오류", k33_num, k33_name, k33_dcf.format(k33_price), k33_cnt, k33_dcf.format(k33_sum));
+																						//"오류", 상품 번호, 상품명, 가격, 수량, 합계 출력
 				System.out.printf("%s[%s%s%10s%5d%10s]\n", "수정", k33_num, k33_name, k33_dcf.format(k33_price), k33_cnt, k33_dcf.format(k33_mod));
-				System.out.printf("**************************************************\n");
+																						//"수정", 상품 번호, 상품명, 가격, 수량, 수정된 합계 출력
+				System.out.printf("**************************************************\n");		//문자열 출력
 			} else {
 				//아무것도 하지 않음
 			}

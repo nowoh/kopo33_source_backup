@@ -1,9 +1,9 @@
 package hw0427_Tue_ch7;
 
-public class k33_ch7_03_구분자_필드추출 {		//별2
+public class k33_ch7_03_구분자_필드추출 {		
 
-	public static void main(String[] args) {
-		String[] k33_oneRec = {
+	public static void main(String[] args) {	//메인함수
+		String[] k33_oneRec = {					//문자열 배열 oneRec 정의
 				"순번,상호명,소재지(도로명),연락처",
 				"1,샤랄랄라,부산광역시 북구 금곡대로 469 농협하나로클럽 2층 (금곡동),070-7450-8460",
 				"2,꼬마다락방,부산광역시 북구 구포시장길 48 3층 (구포동),051-338-5559",
@@ -14,17 +14,14 @@ public class k33_ch7_03_구분자_필드추출 {		//별2
 				"7,키즈파크,부산광역시 북구 만덕대로 23 폴라렉스 5층 (덕천동), ",
 				"8,디지털팡팡 화명점,부산광역시 북구 금곡대로 230 금용복합스포츠타운 6층 (화명동),051-365-7272",
 				"9,주니어킹덤,부산광역시 북구 화명대로 17 목양프라자 4층,051-363-228"};
-		String[] k33_field_name = k33_oneRec[0].split(",");
-		
-		for (int k33_i = 1; k33_i < k33_oneRec.length - 1; k33_i++) {
-			String[] k33_field = k33_oneRec[k33_i].split(",");
-			System.out.println("**************************************************************************************");
-			for (int k33_j = 0; k33_j < k33_field_name.length; k33_j++) {
-				System.out.printf(" %s : %s\n", k33_field_name[k33_j], k33_field[k33_j]);
+		String[] k33_field_name = k33_oneRec[0].split(",");					//field_name 배열을 oneRec[0]을 콤마 기준으로 나눈 것으로 정의
+		for (int k33_i = 1; k33_i < k33_oneRec.length - 1; k33_i++) {		//반복문 : 정수형 변수 i는 1이고, oneRec길이 -1전까지 1씩 증가하며 반복
+			String[] k33_field = k33_oneRec[k33_i].split(",");				//field_name 배열을 oneRec[i]을 콤마 기준으로 나눈 것으로 정의
+			System.out.println("**************************************************************************************");	//문자열 출력
+			for (int k33_j = 0; k33_j < k33_field_name.length; k33_j++) {						//반복문 : 정수형 변수 j는 0이고, j는 field_name길이 전까지 1씩 증가하며 반복
+				System.out.printf(" %s : %s\n", k33_field_name[k33_j], k33_field[k33_j]);		//field_name[j]과 field[j]를 출력
 			}
-			System.out.println("**************************************************************************************");
-			 
+			System.out.println("**************************************************************************************");	//문자열 출력
 		}
 	}
-
 }

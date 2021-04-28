@@ -2,7 +2,7 @@ package hw0427_Tue_ch7;
 
 import java.util.ArrayList;
 
-public class k33_ch7_08_ArrayList2 {		//º°1
+public class k33_ch7_08_ArrayList2 {		
 
 	public static void main(String[] args) {
 		int k33_iTestMAX = 1000000;
