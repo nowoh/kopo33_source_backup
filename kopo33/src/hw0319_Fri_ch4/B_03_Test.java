@@ -83,7 +83,9 @@ public class B_03_Test {
 			}
 			
 		}
+		
 		System.out.println("Maximum : " + M);
+
 	}
 
 }

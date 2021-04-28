@@ -80,20 +80,4 @@ public class B_05_Test_0 implements B_05_Test_Interface {
 
 	}
 
-
-
-	@Override
-	public double calAdditon(double num1, double num2) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-
-	@Override
-	public String getOperator(String formula) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

@@ -32,7 +32,7 @@ public class FixedValue {
 	final static int BABY = 1, CHILD = 2, TEEN = 3, ADULT = 4, OLD = 5;
 	
 	//파일 저장 경로
-	final static String SAVE_ROUTE = "C:\\Users\\howon\\eclipse-workspace\\kopo33_kyd\\src\\everland_project.csv";
+	final static String SAVE_ROUTE = "everland_project.csv";
 	
 	final static String ERROR_MSG = "다시 입력해주시기 바랍니다.";
 }

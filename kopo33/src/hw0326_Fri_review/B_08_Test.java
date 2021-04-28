@@ -1,4 +1,4 @@
-package hw0326_Fri_review;
+package hw0326_Fir_review;
 
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -6,9 +6,9 @@ import java.io.IOException;
 
 import hw0325_Thu_ch8.P05_Thread2_Implement;
 
-public class B_08_Test extends Thread {
+public class B_08_Test implements Runnable {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws IOException {
 		B_08_Test main = new B_08_Test();
 		Thread thread = new Thread(main);
 		thread.start();
@@ -21,7 +21,7 @@ public class B_08_Test extends Thread {
 		
 		double sum = 0;
 		double avg = 0;
-		double min = Double.MAX_VALUE;
+		double min = 1000000000;
 		double max = 0;
 		int count = 1;
 		String data;
@@ -61,7 +61,7 @@ public class B_08_Test extends Thread {
 	}
 	
 	public static void datas (String db) throws IOException {
-		FileWriter fw = new FileWriter("C:\\Users\\howon\\Desktop\\out.txt", true);
+		FileWriter fw = new FileWriter("C:\\Users\\Howon\\Desktop\\out.txt", true);
 		fw.write(db);
 		fw.write("\n");
 		fw.close();

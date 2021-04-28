@@ -8,8 +8,10 @@ public class B_04_Test_Overriding {
 		Scanner scan = new Scanner(System.in);
 		double multi, nm1 = 0, nm2 = 0;
 		String input = scan.nextLine();
-		System.out.println(multiplication(input));
+		multiplication(input);
+		multiplication(nm1, nm2);
 		
+	
 	}
 	
 	public static double multiplication(String sp1) {
@@ -17,11 +19,10 @@ public class B_04_Test_Overriding {
 			String[] a = sp1.split("\\*");
 			double nm1 = Double.parseDouble(a[0]);
 		    double nm2 = Double.parseDouble(a[1]);
-		    double multiResult = multiplication(nm1, nm2);
-		    return multiResult;
+		    return multiplication(nm1, nm2);
+		} else {
+			
 		}
-		return 0;
-		
 	}
 	public static double multiplication(double num1, double num2) {
 		double multi = num1 * num2;
