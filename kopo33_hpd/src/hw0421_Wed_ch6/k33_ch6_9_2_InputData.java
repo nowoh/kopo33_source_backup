@@ -15,7 +15,6 @@ public class k33_ch6_9_2_InputData {
 		k33_mat = new int[k33_iPerson];				//배열 mat의 크기를 iPerson으로 정의
 		k33_sum = new int[k33_iPerson];				//배열 sum의 크기를 iPerson으로 정의
 		k33_avg = new float[k33_iPerson];			//배열 avg의 크기를 iPerson으로 정의
-		
 	}
 	
 	public void k33_SetData(int k33_i, String k33_name, int k33_kor, int k33_eng, int k33_mat) {	

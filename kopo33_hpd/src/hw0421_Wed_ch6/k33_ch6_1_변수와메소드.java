@@ -11,10 +11,6 @@ public class k33_ch6_1_변수와메소드 {
 	
 	public static void main(String[] args) {
 		k33_ch6_1_변수와메소드.k33_iamMethod();
-		
 		k33_iamMethod();
-
 	}
-	
-	
 }

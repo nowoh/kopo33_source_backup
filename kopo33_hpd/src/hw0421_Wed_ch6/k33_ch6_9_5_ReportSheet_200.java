@@ -22,7 +22,7 @@ public class k33_ch6_9_5_ReportSheet_200 {
 			int k33_kor = (int)(Math.random()*100);						//정수형 변수 kor을 0~100까지의 랜덤 정수로 정의
 			int k33_eng = (int)(Math.random()*100);						//정수형 변수 eng을 0~100까지의 랜덤 정수로 정의
 			int k33_mat = (int)(Math.random()*100);						//정수형 변수 mat을 0~100까지의 랜덤 정수로 정의
-			k33_inData.SetData(k33_i, k33_name, k33_kor, k33_eng, k33_mat);			
+			k33_inData.k33_SetData(k33_i, k33_name, k33_kor, k33_eng, k33_mat);			
 		}																//정의된 name,kor,eng,mat을 k33_ch6_9_2_InputData 클래스의 SetData메소드의 인자로 넣어서 실행
 		
 		for (int k33_i = 0; k33_i < k33_iPerson; k33_i += 30) {			//반복문 : 정수형 변수 i는 0이고, i는 iPerson전까지 30씩 증가하며 반복
@@ -42,19 +42,19 @@ public class k33_ch6_9_5_ReportSheet_200 {
 			try {														//출력되는 번호의 수가 i+30보다 작아도 끝까지 출력될 수 있도록 try 걸어줌
 				for (int k33_j = k33_i; k33_j < k33_i+30; k33_j++) {	//반복문 정수형 변수 j는 i이고, j는 i+30전까지 1씩 증가하며 반복
 					System.out.printf("%03d%8s%5d%8d%8d%8d%8.0f\n", 
-							k33_j+1, k33_inData.name[k33_j], k33_inData.kor[k33_j], k33_inData.eng[k33_j], k33_inData.mat[k33_j], k33_inData.sum[k33_j], k33_inData.avg[k33_j]);
+							k33_j+1, k33_inData.k33_name[k33_j], k33_inData.k33_kor[k33_j], k33_inData.k33_eng[k33_j], k33_inData.k33_mat[k33_j], k33_inData.k33_sum[k33_j], k33_inData.k33_avg[k33_j]);
 																			//번호와 이름 국어 영어 수학 총점 평균을 차례대로 출력
-					k33_korSum += k33_inData.kor[k33_i];					//정의된 kor 값을 korSum에 더함
-					k33_engSum += k33_inData.eng[k33_i];					//정의된 eng 값을 engSum에 더함
-					k33_matSum += k33_inData.mat[k33_i];					//정의된 mat 값을 matSum에 더함
-					k33_totalSum += k33_inData.sum[k33_i];					//정의된 sum 값을 totalSum에 더함
-					k33_totalAvg += k33_inData.avg[k33_i];					//정의된 avg 값을 totalAvg에 더함
+					k33_korSum += k33_inData.k33_kor[k33_i];					//정의된 kor 값을 korSum에 더함
+					k33_engSum += k33_inData.k33_eng[k33_i];					//정의된 eng 값을 engSum에 더함
+					k33_matSum += k33_inData.k33_mat[k33_i];					//정의된 mat 값을 matSum에 더함
+					k33_totalSum += k33_inData.k33_sum[k33_i];					//정의된 sum 값을 totalSum에 더함
+					k33_totalAvg += k33_inData.k33_avg[k33_i];					//정의된 avg 값을 totalAvg에 더함
 																			//현재 반복문 끝나고 새로운 반복문 시작되면 초기화됨
-					k33_korAcc += k33_inData.kor[k33_j];					//정의된 kor 값을 korAcc에 더함								
-					k33_engAcc += k33_inData.eng[k33_j];					//정의된 eng 값을 engAcc에 더함
-					k33_matAcc += k33_inData.mat[k33_j];					//정의된 mat 값을 matAcc에 더함
-					k33_totalSumAcc += k33_inData.sum[k33_j];				//정의된 sum 값을 totalSumAcc에 더함
-					k33_totalAvgAcc += k33_inData.avg[k33_j];				//정의된 avg 값을 totalAvgAcc에 더함
+					k33_korAcc += k33_inData.k33_kor[k33_j];					//정의된 kor 값을 korAcc에 더함								
+					k33_engAcc += k33_inData.k33_eng[k33_j];					//정의된 eng 값을 engAcc에 더함
+					k33_matAcc += k33_inData.k33_mat[k33_j];					//정의된 mat 값을 matAcc에 더함
+					k33_totalSumAcc += k33_inData.k33_sum[k33_j];				//정의된 sum 값을 totalSumAcc에 더함
+					k33_totalAvgAcc += k33_inData.k33_avg[k33_j];				//정의된 avg 값을 totalAvgAcc에 더함
 																			//현재 반복문 끝나고 새로운 반복문 시작되어도 계속 누적
 					k33_pageCnt++;											//pageCnt에 1 더함 (현재 반복문 끝나고 새로운 반복문 시작되면 초기화됨)
 					k33_totalAcc++;											//totalAcc에 1 더함

@@ -1,6 +1,6 @@
 package hw0421_Wed_ch6;
 
-public class k33_ch6_6_3_TvRemocon2 { 	//별2
+public class k33_ch6_6_3_TvRemocon2 { 	
 	/*
 	 * Constructor(생성자), 소멸자, 이벤트
 	 */
